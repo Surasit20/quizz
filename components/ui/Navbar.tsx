@@ -8,8 +8,7 @@ const Navbar = () => {
   return (
     <div className="h-16 mb-5 flex justify-between items-center px-4 rounded-lg bg-gradient-to-r from-sky-500 to-indigo-500">
       <Link href="/" className="text-light text-xl md:text-2xl font-bold">
-        <span className="text-secondary">Quizz</span>
-        App
+        แบบทดสอบออนไลน์
       </Link>
 
       <nav className="flex gap-3">
@@ -20,7 +19,7 @@ const Navbar = () => {
           {path === '/' && (
             <span className="w-1 h-4 bg-secondary rounded inline-block animate-slideDown"></span>
           )}
-          Inicio
+          ทำแบบทดสอบ
         </Link>
 
         <Link
@@ -30,7 +29,7 @@ const Navbar = () => {
           {path === '/create' && (
             <span className="w-1 h-4 bg-secondary rounded inline-block animate-slideDown"></span>
           )}
-          Crear encuesta
+          สร้างแบบทดสอบ
         </Link>
       </nav>
     </div>

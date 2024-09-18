@@ -95,8 +95,8 @@ const QuizPage: React.FC<QuizPageProps> = ({ quizDetail }) => {
   return (
     <Fragment>
       <Head>
-        <title>QuizzApp: Resolver encuesta</title>
-        <meta name="description" content="QuizzApp: Resolver encuesta" />
+        <title>แบบทดสอบออนไลน์</title>
+        <meta name="แบบทดสอบออนไลน์" content="แบบทดสอบออนไลน์" />
       </Head>
 
       {resultModalVisible && (

@@ -93,8 +93,8 @@ const CreatePage: React.FC<CreatePageProps> = ({ quizOptions }) => {
   return (
     <Fragment>
       <Head>
-        <title>QuizzApp: Crear una encuesta</title>
-        <meta name="description" content="QuizzApp crea una encuesta" />
+        <title>แบบทดสอบออนไลน์</title>
+        <meta name="แบบทดสอบออนไลน์" content="แบบทดสอบออนไลน์" />
       </Head>
 
       <div className="flex flex-col gap-4">

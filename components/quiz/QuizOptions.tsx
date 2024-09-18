@@ -26,11 +26,12 @@ const QuizOptions: React.FC<QuizOptionsProps> = ({
       </option>
     ));
 
-    options.unshift(
-      <option key="0" value="" disabled className="text-gray-500">
-        {optionKey}
-      </option>,
-    );
+
+    // options.unshift(
+    //   <option key="0" value="ง่าย" disabled className="text-gray-500">
+    //     {optionKey}
+    //   </option>,
+    // );
     return options;
   };
   return (
