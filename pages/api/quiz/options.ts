@@ -3,17 +3,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 const quizOptions: QuizOptions = {
   categories: [
-    'Ciencia y Tecnologia',
-    'Peliculas y Series',
-    'Deportes',
-    'Historia',
-    'Geometria',
-    'Matematicas',
-    'Conocimiento General',
-    'Comida',
-    'Animales y Plantas',
+    'วิทยาศาสตร์และเทคโนโลยี',
+    'ภาพยนตร์และซีรีส์',
+    'กีฬา',
+    'ประวัติศาสตร์',
+    'เรขาคณิต',
+    'คณิตศาสตร์',
+    'ความรู้ทั่วไป',
+    'อาหาร',
+    'สัตว์เเละพืช',
   ],
-  difficulties: ['Facil', 'Intermedio', 'Dificil'],
+  difficulties: ['ง่าย', 'ปานกลาง', 'ยาก'],
 };
 
 export default async function handler(

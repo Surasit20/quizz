@@ -17,10 +17,10 @@ const QuizList: React.FC<QuizListProps> = ({ quizList }) => {
     <Fragment>
       <div className="flex justify-between items-center">
         <h3 className="my-3 text-xl font-bold text-primary">
-          Desafia tu mente, response a una encuesta!
+        ท้าทายความคิดของคุณ ทำเเบบฝึกหัด!
         </h3>
         <span className="text-sm text-gray-500">
-          resultados {quizList.length}
+        ผลลัพธ์ {quizList.length}
         </span>
       </div>
 

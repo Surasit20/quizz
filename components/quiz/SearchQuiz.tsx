@@ -63,8 +63,8 @@ const SearchQuiz: React.FC<SearchQuizProps> = ({
         />
 
         <div className="flex flex-col gap-1 w-[200px]">
-          <label htmlFor="username" className="text-sm">
-            Usuario
+          <label htmlFor="ผู้ใช้" className="text-sm">
+            ผู้ใช้
           </label>
 
           <input
@@ -72,7 +72,7 @@ const SearchQuiz: React.FC<SearchQuizProps> = ({
             id="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            placeholder="Buscar por usuario"
+            placeholder="ผู้ใช้"
             className="flex-1 py-1 px-3 rounded border"
           />
         </div>
@@ -83,14 +83,14 @@ const SearchQuiz: React.FC<SearchQuizProps> = ({
             onClick={handleReset}
             className="text-gray-400 hover:text-gray-500 text-sm font-bold"
           >
-            Cancelar
+            ยกเลิก
           </button>
           <button
             type="button"
             onClick={handleSearchClick}
             className="py-1 px-2 rounded bg-primary hover:text-blue-600 text-light shadow"
           >
-            Buscar
+            ค้นหา
           </button>
         </div>
       </form>

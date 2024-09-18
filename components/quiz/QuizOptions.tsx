@@ -36,8 +36,8 @@ const QuizOptions: React.FC<QuizOptionsProps> = ({
   return (
     <div className="flex flex-col md:flex-row gap-3">
       <div className="flex flex-col gap-1">
-        <label htmlFor="category" className="text-sm text-dark">
-          Categoría
+        <label htmlFor="หมวดหมู่" className="text-sm text-dark">
+          หมวดหมู่
         </label>
         <select
           id="category"
@@ -50,8 +50,8 @@ const QuizOptions: React.FC<QuizOptionsProps> = ({
       </div>
 
       <div className="flex flex-col gap-1">
-        <label htmlFor="difficulty" className="text-sm text-dark">
-          Dificultad
+        <label htmlFor="ความยาก" className="text-sm text-dark">
+          ความยาก
         </label>
         <select
           id="difficulty"
