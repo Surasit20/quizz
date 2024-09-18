@@ -39,22 +39,22 @@ const CreatePage: React.FC<CreatePageProps> = ({ quizOptions }) => {
       (q) => q.question !== questionItem.question,
     );
     setQuestions(updatedQuestions);
-    showToast('success', 'Pregunta eliminada!');
+    showToast('success', 'ลบคำถามแล้ว!');
   };
 
   const handleCreateQuiz = async () => {
     if (questions.length < 5) {
-      showToast('warn', 'Se requieren minimo 5 preguntas');
+      showToast('warn', 'ต้องมีคำถามขั้นต่ำ 5 ข้อ');
       return;
     }
 
     if (!selectedCategory || !selectedDifficulty) {
-      showToast('warn', 'Debes seleccionar una categoria y una dificultad!');
+      showToast('warn', 'คุณต้องเลือกหมวดหมู่และความยาก!');
       return;
     }
 
     if (!username) {
-      showToast('warn', 'Debes de ingresar tu nombre');
+      showToast('warn', 'คุณต้องกรอกชื่อของคุณ');
       return;
     }
 
@@ -72,11 +72,11 @@ const CreatePage: React.FC<CreatePageProps> = ({ quizOptions }) => {
     setLoading(false);
 
     if (!data) {
-      showToast('error', 'No se pudo crear la encuesta!');
+      showToast('error', 'ไม่สามารถสร้างแบบทดสอบได้!');
     }
 
     const { message, _id } = data;
-    showToast('success', `Quiz added - ID: ${_id}`);
+    showToast('success', `เพิ่มแบบทดสอบแล้ว - ID: ${_id}`);
 
     // clear states
     setSelectedCategory('');

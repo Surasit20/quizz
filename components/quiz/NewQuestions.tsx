@@ -73,27 +73,27 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
     // }
 
     if (!newQuestion) {
-      showToast('warn', 'Se requiere agregar una pregunta!');
+      showToast('warn', 'คุณต้องเพิ่มคำถาม!');
       return;
     }
 
     if (questions.find((q) => q.question === newQuestion)) {
-      showToast('warn', 'Esta pregunta ya existe');
+      showToast('warn', 'คำถามนี้มีอยู่แล้ว');
       return;
     }
 
-    if (Object.values(answers).filter((answer) => !!answer).length < 3) {
-      showToast('warn', 'Se require rellenar todas las respuestas');
+    if (Object.values(answers).filter((answer) => !!answer).length < 4) {
+      showToast('warn', 'ต้องกรอกคำตอบทั้งหมด');
       return;
     }
 
     if (hasDuplicates(Object.values(answers))) {
-      showToast('warn', 'No puedes colocar las mismas respuestas!');
+      showToast('warn', 'คุณไม่สามารถสร้างคำตอบเดียวกันได้!');
       return;
     }
 
     if (!Object.values(checkboxState).find((item) => item)) {
-      showToast('warn', 'Debes marcar la respuesta correcta!');
+      showToast('warn', 'คุณต้องทำเครื่องหมายคำตอบที่ถูกต้อง!');
       return;
     }
 
@@ -118,7 +118,7 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
     };
 
     handleSetQuestions(newQuestionItem);
-    showToast('success', 'Pregunta agregada!');
+    showToast('success', 'เพิ่มคำถามแล้ว!');
 
     // reset states
     setNewQuestion('');
