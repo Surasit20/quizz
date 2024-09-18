@@ -9,7 +9,7 @@ type QuizListProps = {
 const QuizList: React.FC<QuizListProps> = ({ quizList }) => {
   if (quizList.length === 0) {
     return (
-      <p className="text-gray-500">Lo sentimos, no hay nada que mostrar...</p>
+      <p className="text-gray-500">ขออภัย ไม่มีอะไรจะแสดง...</p>
     );
   }
 
