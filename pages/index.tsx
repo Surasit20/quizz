@@ -17,16 +17,16 @@ const HomePage: React.FC<HomePageProps> = ({ quizList, quizOptions }) => {
 
   const handleSearchQuiz = async (params: SearchQuizParams) => {
     setLoading(true);
-    const searchResult = await searchQuiz(params);
+    // const searchResult = await searchQuiz(params);
     setLoading(false);
-    setDisplayedList(searchResult);
+    // setDisplayedList(searchResult);
   };
 
   const handleResetSearch = async () => {
     setLoading(true);
-    const searchResult = await getAllQuizzes();
+    // const searchResult = await getAllQuizzes();
     setLoading(false);
-    setDisplayedList(searchResult);
+    // setDisplayedList(searchResult);
   };
 
   return (

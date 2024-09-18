@@ -11,24 +11,28 @@ type CheckboxStateType = {
   answer1Check: boolean;
   answer2Check: boolean;
   answer3Check: boolean;
+  answer4Check: boolean;
 };
 
 type AnswersStateType = {
   answer1: string;
   answer2: string;
   answer3: string;
+  answer4: string;
 };
 
 const initialAnswersState = {
   answer1: '',
   answer2: '',
   answer3: '',
+  answer4: '',
 };
 
 const initialCheckboxState = {
   answer1Check: false,
   answer2Check: false,
   answer3Check: false,
+  answer4Check: false,
 };
 
 const NewQuestions: React.FC<NewQuestionsProps> = ({
@@ -62,11 +66,11 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
   };
 
   const handleCheckQuestions = () => {
-    if (questions.length === 10) {
-      // max length
-      showToast('warn', 'No se pueden agregar mas preguntas.');
-      return;
-    }
+    // if (questions.length === 10) {
+    //   // max length
+    //   showToast('warn', 'No se pueden agregar mas preguntas.');
+    //   return;
+    // }
 
     if (!newQuestion) {
       showToast('warn', 'Se requiere agregar una pregunta!');
@@ -146,10 +150,10 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
           </div>
 
           {/*respuestas*/}
-          <div className="flex flex-col md:flex-row gap-4">
+          <div className="flex flex-col  gap-4">
             {/*answer1*/}
             <div className="flex flex-col gap-1">
-              <div className="flex justify-between items-center">
+              <div className="flex">
                 <label htmlFor="answer1" className="text-sm text-gray-500">
                   Answer
                 </label>
@@ -175,7 +179,7 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
             </div>
             {/*answer2*/}
             <div className="flex flex-col gap-1">
-              <div className="flex justify-between items-center">
+              <div className="flex">
                 <label htmlFor="answer2" className="text-sm text-gray-500">
                   Answer
                 </label>
@@ -201,7 +205,7 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
             </div>
             {/*answer3*/}
             <div className="flex flex-col gap-1">
-              <div className="flex justify-between items-center">
+              <div className="flex">
                 <label htmlFor="answer1" className="text-sm text-gray-500">
                   Answer
                 </label>
@@ -225,10 +229,36 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
                 className="border text-lg py-1 px-3 rounded bg-light text-dark"
               />
             </div>
+              {/*answer4*/}
+              <div className="flex flex-col gap-1">
+              <div className="flex">
+                <label htmlFor="answer4" className="text-sm text-gray-500">
+                  Answer
+                </label>
+                <span className="text-sm text-gray-500">
+                  Correcta{' '}
+                  <input
+                    name="answer4Check"
+                    type="checkbox"
+                    checked={checkboxState.answer4Check}
+                    onChange={handleAnswersCheckboxChange}
+                  />
+                </span>
+              </div>
+              <input
+                type="text"
+                id="answer4"
+                name="answer4"
+                placeholder="respuesta 4"
+                value={answers.answer4}
+                onChange={handleAnswerChange}
+                className="border text-lg py-1 px-3 rounded bg-light text-dark"
+              />
+            </div>
           </div>
 
           {/* agregar */}
-          <div className="flex justify-end">
+          <div className="flex justify-center">
             <button
               type="button"
               onClick={handleCheckQuestions}
