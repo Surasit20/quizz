@@ -129,7 +129,7 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
   return (
     <div className="flex flex-col gap-5">
       <h3 className="text-primary font-bold">
-        Crea 5 o 10 preguntas con 3 respuestas cada 1.
+      สร้างคำถามมากกว่า 5 ข้อ โดยแต่ละข้อมี 4 คำตอบ
       </h3>
 
       <form>
@@ -137,12 +137,12 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
           {/*pregunta*/}
           <div className="flex flex-col gap-1">
             <label htmlFor="newQuestion" className="text-sm text-gray-500">
-              Nueva Pregunta
+            สร้างคำถามใหม่
             </label>
             <input
               id="newQuestion"
               type="text"
-              placeholder="Ingresa tu pregunta aqui"
+              placeholder="กรุณาระบุคำถามที่นี่"
               value={newQuestion}
               onChange={(e) => setNewQuestion(e.target.value)}
               className="border text-lg py-1 px-3 rounded bg-light text-dark"
@@ -155,10 +155,10 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
             <div className="flex flex-col gap-1">
               <div className="flex">
                 <label htmlFor="answer1" className="text-sm text-gray-500">
-                  Answer
+                  คำตอบข้อที่ 1 &nbsp;
                 </label>
                 <span className="text-sm text-gray-500">
-                  Correcta{' '}
+                  ถูกต้อง {' '}
                   <input
                     name="answer1Check"
                     type="checkbox"
@@ -171,7 +171,7 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
                 type="text"
                 id="answer1"
                 name="answer1"
-                placeholder="respuesta 1"
+                placeholder="คำตอบที่ 1"
                 value={answers.answer1}
                 onChange={handleAnswerChange}
                 className="border text-lg py-1 px-3 rounded bg-light text-dark"
@@ -181,10 +181,10 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
             <div className="flex flex-col gap-1">
               <div className="flex">
                 <label htmlFor="answer2" className="text-sm text-gray-500">
-                  Answer
+                คำตอบข้อที่ 2 &nbsp;
                 </label>
                 <span className="text-sm text-gray-500">
-                  Correcta{' '}
+                ถูกต้อง {' '}
                   <input
                     name="answer2Check"
                     type="checkbox"
@@ -197,7 +197,7 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
                 type="text"
                 id="answer2"
                 name="answer2"
-                placeholder="respuesta 2"
+                placeholder="คำตอบที่ 2"
                 value={answers.answer2}
                 onChange={handleAnswerChange}
                 className="border text-lg py-1 px-3 rounded bg-light text-dark"
@@ -207,10 +207,10 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
             <div className="flex flex-col gap-1">
               <div className="flex">
                 <label htmlFor="answer1" className="text-sm text-gray-500">
-                  Answer
+                คำตอบข้อที่ 3 &nbsp;
                 </label>
                 <span className="text-sm text-gray-500">
-                  Correcta{' '}
+                ถูกต้อง {' '}
                   <input
                     name="answer3Check"
                     type="checkbox"
@@ -223,7 +223,7 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
                 type="text"
                 id="answer3"
                 name="answer3"
-                placeholder="respuesta 3"
+                placeholder="คำตอบที่ 3"
                 value={answers.answer3}
                 onChange={handleAnswerChange}
                 className="border text-lg py-1 px-3 rounded bg-light text-dark"
@@ -233,10 +233,10 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
               <div className="flex flex-col gap-1">
               <div className="flex">
                 <label htmlFor="answer4" className="text-sm text-gray-500">
-                  Answer
+                คำตอบข้อที่ 4 &nbsp;
                 </label>
                 <span className="text-sm text-gray-500">
-                  Correcta{' '}
+                ถูกต้อง {' '}
                   <input
                     name="answer4Check"
                     type="checkbox"
@@ -249,7 +249,7 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
                 type="text"
                 id="answer4"
                 name="answer4"
-                placeholder="respuesta 4"
+                placeholder="คำตอบที่ 4"
                 value={answers.answer4}
                 onChange={handleAnswerChange}
                 className="border text-lg py-1 px-3 rounded bg-light text-dark"
@@ -264,7 +264,7 @@ const NewQuestions: React.FC<NewQuestionsProps> = ({
               onClick={handleCheckQuestions}
               className="bg-primary hover:bg-blue-600 text-light py-2 px-4 rounded-md shadow transition"
             >
-              Agregar
+              เพิ่ม
             </button>
           </div>
         </div>
