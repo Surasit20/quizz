@@ -115,7 +115,7 @@ const QuizPage: React.FC<QuizPageProps> = ({ quizDetail }) => {
           <div className="flex flex-col items-start gap-2 md:flex-row md:justify-between p-2 bg-white rounded-md">
             <div>
               <h3 className="text-xl mb-2">
-                Creada por{' '}
+                สร้างโดย{' '}
                 <span className="text-primary">{quizDetail.owner}</span>{' '}
                 {formatDate(quizDetail.createdAt)}
               </h3>
@@ -145,7 +145,7 @@ const QuizPage: React.FC<QuizPageProps> = ({ quizDetail }) => {
         <div className="flex justify-end gap-2">
           <input
             type="text"
-            placeholder="Cual es tu nombre?"
+            placeholder="คุณชื่ออะไร?"
             value={username}
             onChange={handleUserNameChange}
             className="py-2 px-4 rounded-md shadow"
@@ -156,7 +156,7 @@ const QuizPage: React.FC<QuizPageProps> = ({ quizDetail }) => {
             onClick={handleSolveQuiz}
             className="bg-primary hover:bg-blue-600 text-light py-2 px-4 rounded-md shadow transition"
           >
-            Enviar
+            ส่งข้อสอบ
           </button>
         </div>
 
@@ -165,12 +165,12 @@ const QuizPage: React.FC<QuizPageProps> = ({ quizDetail }) => {
           <div className="flex flex-col gap-3 max-h-80 overflow-y-auto">
             <div>
               <h3 className="text-primary pl-2 font-bold border-l-4 border-l-primary">
-                Total de participantes
+              ผู้เข้าร่วมทั้งหมด
               </h3>
-              <p className="text-sm text-gray-400">Lo podrias hacer mejor?</p>
+              <p className="text-sm text-gray-400">คุณทำมันให้ดีขึ้นได้ไหม?</p>
             </div>
 
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-2 mb-5">
               {participants.map((item) => (
                 <li
                   key={item.username}

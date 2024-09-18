@@ -111,15 +111,45 @@ const CreatePage: React.FC<CreatePageProps> = ({ quizOptions }) => {
           handleSetQuestions={handleSetQuestions}
         />
 
+         {/* Name privacity create*/}
+         {questions.length >= 5 && (
+          <div className="h-10 flex gap-2 my-3">
+            <input
+              type="text"
+              placeholder="ชื่อของคุณ?"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              className="py-2 px-4 rounded-md shadow"
+            />
+
+            <select
+              id="privacy"
+              value={privacy}
+              onChange={(e) => setPrivacy(e.target.value)}
+              className="py-2 px-4 rounded-md shadow"
+            >
+              <option value="Public">เผยแพร่</option>
+              <option value="Private">ส่วนตัว</option>
+            </select>
+
+            <button
+              onClick={handleCreateQuiz}
+              className="text-xl font-bold bg-success text-light hover:bg-blue-600 px-4 rounded-md shadow"
+            >
+              สร้าง
+            </button>
+          </div>
+        )}
+
         {/* questions list */}
         {questions.length > 0 && (
           <div className="animate-slideUp flex flex-col gap-3">
             <div>
               <h3 className="text-primary pl-2 font-bold border-l-4 border-l-primary">
-                Lista de preguntas
+                รายการคำถาม
               </h3>
               <p className="text-sm text-gray-400">
-                Revisalo bien antes de enviarlo!
+              ตรวจสอบให้ดีก่อนส่ง!
               </p>
             </div>
 
@@ -166,35 +196,7 @@ const CreatePage: React.FC<CreatePageProps> = ({ quizOptions }) => {
             </ul>
           </div>
         )}
-        {/* Name privacity create*/}
-        {questions.length >= 5 && (
-          <div className="h-10 flex gap-2">
-            <input
-              type="text"
-              placeholder="Tu nombre?"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              className="py-2 px-4 rounded-md shadow"
-            />
-
-            <select
-              id="privacy"
-              value={privacy}
-              onChange={(e) => setPrivacy(e.target.value)}
-              className="py-2 px-4 rounded-md shadow"
-            >
-              <option value="Public">Publica</option>
-              <option value="Private">Privada</option>
-            </select>
-
-            <button
-              onClick={handleCreateQuiz}
-              className="text-xl font-bold bg-primary text-light hover:bg-blue-600 px-4 rounded-md shadow"
-            >
-              Create
-            </button>
-          </div>
-        )}
+       
       </div>
     </Fragment>
   );

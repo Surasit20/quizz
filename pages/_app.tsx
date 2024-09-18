@@ -7,10 +7,10 @@ export const App = ({ Component, pageProps }: AppProps) => {
   return (
     <Layout>
       <Head>
-        <title>Quizz App: Crea tus quizz facilmente!</title>
+        <title>แบบทดสอบออนไลน์</title>
         <meta
-          name="description"
-          content="Una app para crear quizz y resolverlos."
+          name="แบบทดสอบออนไลน์"
+          content="แบบทดสอบออนไลน์"
         />
       </Head>
       <Component {...pageProps} />
